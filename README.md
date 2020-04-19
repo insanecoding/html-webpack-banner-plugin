@@ -1,3 +1,5 @@
+# Forked from [html-webpack-banner-plugin](https://github.com/Cap32/html-webpack-banner-plugin) to support HtmlWebpackPlugin v.4
+
 # html-webpack-banner-plugin
 
 [![Build Status](https://travis-ci.org/Cap32/html-webpack-banner-plugin.svg?branch=master)](https://travis-ci.org/Cap32/html-webpack-banner-plugin)

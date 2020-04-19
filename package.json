@@ -1,6 +1,6 @@
 {
-  "name": "html-webpack-banner-plugin",
-  "version": "2.0.0",
+  "name": "@insanecoding/html-webpack-banner-plugin",
+  "version": "1.0.0",
   "description": "Adds a banner to the top of generated html",
   "scripts": {
     "start": "npm test -- -w",
@@ -15,11 +15,19 @@
     "html",
     "banner",
     "html-webpack-plugin",
+    "html-webpack-banner-plugin",
     "plugin"
   ],
-  "repository": "https://github.com/Cap32/html-webpack-banner-plugin.git",
-  "author": "Cap32 <webb.png@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/insanecoding/html-webpack-banner-plugin.git"
+  },
+  "author": "insanecoding <nzh.dmitry@gmail.com> (https://github.com/insanecoding)",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/insanecoding/html-webpack-banner-plugin/issues"
+  },
+  "homepage": "https://github.com/insanecoding/html-webpack-banner-plugin",
   "devDependencies": {
     "eslint": "^4.19.1",
     "eslint-config-cantonjs": "^1.0.0",
