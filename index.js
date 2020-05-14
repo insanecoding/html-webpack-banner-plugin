@@ -2,6 +2,8 @@
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+const REGEX_DOCTYPE = /^<!doctype[^>]*?>/i;
+
 class HtmlWebpackBannerPlugin {
 	constructor(options) {
 		this.options = options || {};
@@ -18,8 +20,14 @@ class HtmlWebpackBannerPlugin {
 				'HtmlWebpackBannerPlugin',
 				(htmlPluginData, cb) => {
 					const comment = banner && !raw ? '<!--' + banner + '-->\n' : banner;
+					const doctype = htmlPluginData.html.match(REGEX_DOCTYPE);
 
-					htmlPluginData.html = `${comment}${htmlPluginData.html}`;
+					if (typeof doctype != 'undefined') {
+						htmlPluginData.html = htmlPluginData.html.replace(REGEX_DOCTYPE, `${doctype}${comment}`);
+					} else {
+						htmlPluginData.html = `${comment}${htmlPluginData.html}`;
+					}
+
 					cb(null, htmlPluginData);
 				}
 			);
